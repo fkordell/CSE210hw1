@@ -1,0 +1,22 @@
+Classes and Objects
+* Classes are blueprints of Objects
+* A class is a collection of functions and variables.
+* Classes represent things in the real world in code. 
+
+Car example
+- Functionalities
+* Driver
+* Stop
+* Turn
+* Play music
+
+- Properties (member variables)
+* Metal
+* Red
+* Top speed
+* Sound volume
+ using (StreamWriter writer = new StreamWriter("saveEntries.txt"))
+        {
+            writer.WriteLine("Hello World!");
+        }
+        string readText = File.ReadAllText("saveEntries.txt");
