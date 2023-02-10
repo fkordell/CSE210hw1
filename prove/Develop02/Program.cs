@@ -30,7 +30,7 @@ class Program
                 //Get the current date
                 DateTime localDate = DateTime.Now;
                 string date =localDate.ToString("dd/MM/yyyy");
-                //Creat entry object
+                //Create entry object
                 Entry entry = new Entry();
                 entry._date = date;
                 entry._prompt = prompt;
