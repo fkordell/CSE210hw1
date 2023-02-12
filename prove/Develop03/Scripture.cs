@@ -1,6 +1,6 @@
 using System;
 
-public class Scripture{
+class Scripture{
     
     private string _reference;
     private string _text;

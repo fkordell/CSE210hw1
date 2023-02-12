@@ -1,6 +1,6 @@
 using System;
 
-public class Reference{
+class Reference{
 
     private string _book;
     private string _chapter;
@@ -22,7 +22,13 @@ public class Reference{
     }
 
     public string GetReference(){
-        string text = _verse1;
-        return text;
+        if (string.IsNullOrEmpty(_verse2)){
+            string reference = ($"{_book} {_chapter} {_verse1} {_verse2}");
+            return reference;
+        }
+        else{
+            string reference = ($"{_book} {_chapter} {_verse1} {_verse2}");
+            return reference;
+        }
     }
 }

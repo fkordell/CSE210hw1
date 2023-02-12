@@ -7,8 +7,7 @@ class Program
         Console.WriteLine("Hello Develop03 World!");
 
         //Create New Scripture
-        Scripture scripture = new Scripture("John 3:16", "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
-
+        Scripture scripture = new Scripture("Mosiah 2:22" , "And behold, all that he arequires of you is to keep his commandments; and he has promised you that if ye would keep his commandments ye should prosper in the land; and he never doth vary from that which he hath said; therefore, if ye do keep his commandments he doth bless you and prosper you.");
         //Clear the Console
         Console.Clear();
         scripture.DisplayScripture();

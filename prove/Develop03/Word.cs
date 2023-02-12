@@ -1,12 +1,16 @@
 using System;
+ class Word{
 
-public class Word{
+    public bool _show = true;
+    public string _text;
 
-    //Hide Words
-    //Show 
-    //Is hidden
-    //Display Scripture text
-    private List<string> _words = new List<string>();
-    private List<string> _hiddenWords = new List<string>();
+    public Word(string word){
+        _text = word;
+    }
+
+    public void Hide(){
+        _text = "___";
+        _show = false;
+    }    
 
 }
