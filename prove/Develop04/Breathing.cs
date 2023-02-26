@@ -1,30 +1,32 @@
-using system; 
+using System; 
 
 public class Breathing : Activity{
 
-    private string _activityDescription;
-    private string _timerIn;
-    private string _timerOut;
-
-    public Breathing(string startMessage string finishMesage string getReadyMessage string duration string activityDescription string timerIn string timerOut): base(startMessage finishMessage getReadyMessage duration)
+    public Breathing()
     {
 
-        _activityDescription = activityDescription;
-        _timerIn = timerIn;
-        _timerOut =timerOut;
+        _startMessage = "This activity will help you by walking you through breathing in and out slowly. CLear your mind and focus on your breathing";
+        _activityType = "The breathing activity";
+        _finishMessage = "Well Done!";
 
     }
-    public string GetActivityDescription(){
+    public override void doActivity(){
+        GetStartMessage();
+        GetReady();
 
-        return _activityDescription;
-    }
-    public string GetTimerIn(){
+        float seconds = Convert.ToInt32(_duration);
+        for (int i = 0; i < Math.Ceiling(seconds/8); i++){
+            Console.WriteLine("Breathe in ");
+            Console.WriteLine();
+            Thread.Sleep(4000);
+            Console.WriteLine("Breathe Out");
+            Console.WriteLine();
+            Thread.Sleep(4000);
+        }
+        GetEndMessage();
 
-        return _timerIn;
-    }
-    public string GetTimerOut(){
 
-        return _timerOut;
+
     }
 
 }
