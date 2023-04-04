@@ -1,27 +1,41 @@
 using System;
 
-public class video{
+public class Video{
 
-    List<comment> _comments;
+    List<Comment> _comments;
 
-    public string _title;
+    private string _title;
 
-    public string _author;
+    private string _author;
 
-    public double _vidLength;
+    private double _vidLength;
 
-    public video(string title, string author, double vidLength){
+    public Video(string title, string author, double vidLength){
         _author = author;
         _title = title;
         _vidLength = vidLength;
+        _comments = new List<Comment>();
     }
 
-    public int GetComment(){
+    public int GetNumComments(){
         return _comments.Count();
     }
 
-    public string Addcomment(){
-        _comments.Add();
+    public void Addcomment(string commentName, string commentText ){
+        _comments.Add(new Comment(commentName, commentText));
     }
+    public void DisplayComments(){
+        foreach(Comment comment in _comments)
+            Console.WriteLine($"{comment.GetComment()}");
+        }
+    public void DisplayVideo(){
+        Console.WriteLine();
+        Console.WriteLine($"Video Title: {_title}, Author: {_author}, Video Length: {_vidLength} minutes, Number of comments: {GetNumComments()} ");
+        Console.WriteLine();
+        DisplayComments();
+        Console.WriteLine();
+    }
+    
+   
 
 }

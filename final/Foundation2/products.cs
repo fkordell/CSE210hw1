@@ -1,16 +1,36 @@
 using System;
 
-public class products{
+public class Products{
 
-public int _idNum;
-public string _productName;
-public double _price;
+private int _idNum;
+private string _productName;
+private double _price;
 
-public double _quantity;
+private int _quantity;
 
-public double GetTotal(){
+
+public Products(string productName, int idNum, double price, int quantity){
+
+    _productName = productName;
+    _idNum = idNum;
+    _price = price;
+    _quantity = quantity;
+}
+
+public double GetItemTotal(){
 
     return _quantity * _price;
 }
-
+public string GetName(){
+    return _productName;
+}
+public int GetID(){
+    return _idNum;
+}
+public int GetQauntity(){
+    return _quantity;
+}
+public double GetItemPrice(){
+    return _price;
+}
 }

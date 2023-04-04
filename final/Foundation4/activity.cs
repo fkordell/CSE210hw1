@@ -1,20 +1,18 @@
 using System;
 
-public class Activity{
+public abstract class Activity{
 
     protected string _currentDate;
 
+    protected string _activityType;
+
     protected double _activityLength;
-    protected double _distance;
 
-
-    public virtual void doActivity(){
+    public virtual void getSpeed(){
 
     }
-    public double getDuration(){
-        return _activityLength;
+    public virtual void getPace(){
+
     }
-    // public double getDistance(){
-        
-    // }
+    public abstract string getSummary(double input);
 }

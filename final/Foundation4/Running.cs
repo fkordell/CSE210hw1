@@ -2,24 +2,15 @@ using System;
 
 public class Running : Activity{
 
-    private double _laps;
-    Activity activity = new Activity();
-    public Running(){
-
+    public Running(double activityLength){
+        _activityLength = activityLength;
+    }
+    public override string getSummary(double distance){
         DateTime localDate = DateTime.Now;
         string _currentDate = localDate.ToString("dd/MM/yyyy");
+        double speed = (distance / _activityLength) * 60;
+        double pace = (_activityLength / distance);
 
-        
-    }
-
-    public override void doActivity()
-    {
-        Console.WriteLine("How many laps did you run today?");
-        _laps = Convert.ToInt16(Console.ReadLine());
-        _distance = _laps * 4;
-        Console.WriteLine($"You ran {_distance} miles today");
-        Console.WriteLine("How long did you run for today in minutes?");
-        _activityLength = Convert.ToInt16(Console.ReadLine());
-        
+        return ($"{_currentDate} Running {(_activityLength)} min, {Math.Round(distance, 1)} miles, {Math.Round(speed, 1)} mph, {Math.Round(pace, 1)} minute per mile");
     }
 }

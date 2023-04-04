@@ -1,14 +1,18 @@
 using System;
 
-public class comment{
+public class Comment{
 
-    public string _commentText;
+    private string _commentText;
 
-    public string _authorName;
+    private string _commentName;
 
 
-    public comment(string authorName, string commentText){
-        _authorName = authorName;
+    public Comment(string commentName, string commentText){
+        _commentName = commentName;
         _commentText = commentText;
+    }
+
+    public string GetComment(){
+        return $"Name: {_commentName}, Comment: {_commentText}";
     }
 }
